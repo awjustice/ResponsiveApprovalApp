@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Cinzel+Decorative:wght@700;900&family=Source+Sans+Pro:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="screen" type="text/css" href="styles.css" />
+    <title>Responsive Approval Voting App</title>
+  </head>
+  <body>
+
+    <div id="header">
+
+      <h2 onclick="homeReload()"><strong>What is Approval Voting?</strong></h2>
+
+      <div id="background">
+        <p id="mainText"><em>Now choose all that you approve of...one or more...</em></p>
+      </div>
+
+    </div>
+
+
+    <button id="moreButton" class="hide">Read On</button>
+
+
+    <div id="main">
+      
+      <div class="wrapper">
+        <img src="./images/newChocolate1.png" id="chocolate1" alt="chocolate1" />          
+      <div id="voteBarChocolate1" class="voteBar hide"><p>1120 </br> 30%</p></div>
+    </div>
+
+      <div class="wrapper">
+        <img src="./images/newChocolate2.jpg" id="chocolate2" alt="chocolate2" />  
+      
+      
+      <div id="voteBarChocolate2" class="voteBar hide"><p>1105 </br> 29%</p></div>
+    </div>
+
+      <div class="wrapper">
+        <img src="./images/newVanilla.png" id="vanilla" alt="vanilla" />  
+      
+     
+      <div id="voteBarVanilla" class="voteBar hide"><p>1546 </br> 41%</p></div>
+    </div>
+
+    </div>
+
+
+
+    <div id="footer">
+      <button id="voteButton"><strong>Vote</strong></button>
+    </div>
+
+    <script type="text/javascript" src="approval.js"></script>
+
+  </body>
+
+</html>
