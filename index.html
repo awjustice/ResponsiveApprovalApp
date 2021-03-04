@@ -12,7 +12,7 @@
   </head>
   <body>
 
-    <div id="header">
+              <div id="header">
 
       <h2 onclick="homeReload()"><em>What is Approval Voting?</em></h2>
 
@@ -20,34 +20,46 @@
         <p id="mainText">Choose your favorite...then VOTE</></p>
       </div>
 
-    </div>
+         </div>
 
 
     <button id="moreButton" onclick="infoTextChange()" class="hide">Tell me why</button>
 
 
-    <div id="main">
-      
-      <div class="wrapper">
-        <img src="./images/newChocolate1.png" id="chocolate1" alt="chocolate1" />          
+  <div id="main">
+
+    <div class="wrapper">
+    <input type="radio" id="chocolate1" class="offThePage" name="radio">
+
+    <label for="chocolate1">
+      <img src="./images/newChocolate1.png" id="chocolate1" alt="chocolate1" />          
       <div id="voteBarChocolate1" class="voteBar hide"><p>1120 </br> 30%</p></div>
-    </div>
+    </label>
 
-      <div class="wrapper">
-        <img src="./images/newChocolate2.jpg" id="chocolate2" alt="chocolate2" />  
-      
-      
+
+    </div>
+    
+
+  <div class="wrapper">
+    <input type="radio" id="chocolate2" class="offThePage" name="radio">     
+
+    <label for="chocolate2">
+      <img src="./images/newChocolate2.jpg" id="chocolate2" alt="chocolate2" />  
       <div id="voteBarChocolate2" class="voteBar hide"><p>1105 </br> 29%</p></div>
-    </div>
+    </label>
 
-      <div class="wrapper">
-        <img src="./images/newVanilla.png" id="vanilla" alt="vanilla" />  
-      
-     
+  </div>
+
+    <div class="wrapper">  
+    <input type="radio" id="vanilla" class="offThePage" name="radio">      
+
+    <label for="vanilla">
+      <img src="./images/newVanilla.png" id="vanilla" alt="vanilla" />      
       <div id="voteBarVanilla" class="voteBar hide"><p>1546 </br> 41%</p></div>
-    </div>
+    </label>  
 
-    </div>
+  </div>
+  </div>
 
 
 
@@ -55,8 +67,7 @@
       <button id="voteButton"><em>Vote</em></button>
     </div>
 
+
     <script type="text/javascript" src="app.js"></script>
-
   </body>
-
 </html>

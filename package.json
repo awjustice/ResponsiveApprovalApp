@@ -1,0 +1,19 @@
+{
+  "name": "responsiveapprovalapp",
+  "version": "1.0.0",
+  "description": "Fully Responsive App demonstrating Approval Voting benefits",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awjustice/ResponsiveApprovalApp.git"
+  },
+  "author": "AJ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/awjustice/ResponsiveApprovalApp/issues"
+  },
+  "homepage": "https://github.com/awjustice/ResponsiveApprovalApp#readme"
+}
