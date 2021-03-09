@@ -2,18 +2,18 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    position: relative;
+}
+
+html {
 }
 
 body {
-    padding: 0;
     margin: 0;
+    padding: 0;
     color: black;
-    background-image: url();
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    height: 100vh;
+    background-color: black;
+    min-height: 100vh;
     text-align: center;
 }
 
@@ -24,23 +24,28 @@ body {
 }
 
 h2 {
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Cinzel", serif;
     font-weight: 900;
     border: 3px solid black;
-    margin: 1% auto;
+    margin: 0.3rem auto;
     padding: 0.25rem;
-    border-radius: 5px;
-    background-color: cadetblue;
+    border-radius: 8px;
+    background-image: radial-gradient(
+        circle farthest-corner at 16.5% 28.1%,
+        rgba(15, 27, 49, 1) 0%,
+        rgba(0, 112, 218, 1) 90%
+    );
+    transition-duration: 900ms;
 }
 
 #background {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: cornflowerblue;
+    background-color: #6495ed;
     width: 85%;
     height: 5rem;
-    margin: 1% auto;
+    margin: 0.3rem auto;
     text-align: center;
     border: 3px solid black;
     border-radius: 5px;
@@ -48,10 +53,11 @@ h2 {
 }
 
 p {
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Tinos", serif;
     font-weight: 600;
     font-size: 1.2rem;
     line-height: 1.1;
+    letter-spacing: 0.4px;
     padding: 1rem;
 }
 
@@ -59,7 +65,7 @@ p {
     display: flex;
     justify-content: space-evenly;
     height: 50vh;
-    margin: 0.5rem auto 0;
+    margin: 0.7rem auto 0;
 }
 
 img {
@@ -71,35 +77,34 @@ img {
     object-fit: cover;
     border: 2px solid black;
     border-radius: 5px;
-    opacity: 0.9;
     box-shadow: black 4px 4px 4px;
+    transition-duration: 200ms;
 }
 
 img:hover,
 img:focus {
     cursor: pointer;
-    opacity: 1;
-    border: 3px solid red;
+    border: 5px solid red;
 }
 
 input[type="radio"]:checked + label img {
-    filter: brightness(1.4);
-    border: 3px solid red;
+    filter: brightness(1.3);
+    border: 5px solid red;
 }
 
 input[type="checkbox"]:checked + label img {
-    filter: brightness(1.5);
-    border: 3px solid red;
+    filter: brightness(1.3);
+    border: 5px solid red;
 }
 
 .winner {
     opacity: 1;
     filter: brightness(1.5);
-    border: 5px solid red;
+    border: 8px solid red;
 }
 
 .loser {
-    border: none;
+    filter: brightness(0.3);
 }
 
 .offThePage {
@@ -114,98 +119,80 @@ input[type="checkbox"]:checked + label img {
 #footer {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 #voteButton {
+    font-family: "Monoton", cursive;
     background-color: darkred;
     color: black;
-    font-family: "Cinzel Decorative", cursive;
-    font-weight: 700;
+    font-weight: 800;
     padding: 0.4rem 1rem 0.4rem 0.4rem;
     margin-top: -5rem;
     font-size: 3rem;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 5px solid black;
     box-shadow: black 2px 2px 2px;
-    transition: transform 100ms ease-out;
-}
-
-#moreButton {
-    background-color: darkgreen;
-    color: black;
-    font-family: "Cinzel Decorative", cursive;
-    font-weight: 700;
-    position: absolute;
-    left: 25%;
-    top: 25%;
-    font-size: 1.4rem;
-    width: 50%;
-    height: 5rem;
-    border-radius: 10px;
-    margin-top: 1rem;
-    transition: filter 250ms ease-out;
-    z-index: 2;
+    transition: transform 200ms ease-in;
+    transition-duration: 300ms;
 }
 
 #voteButton:hover,
 #voteButton:focus {
     cursor: pointer;
-    filter: brightness(1.75);
-    transition: 0.3s;
-    transform: scale(1.05);
-    opacity: 0.9;
+    filter: brightness(1.5);
+    transform: scale(1.03);
+}
+
+#moreButton {
+    background-color: #660000;
+    color: black;
+    font-family: "Cinzel", serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    position: absolute;
+    left: 50%;
+    bottom: 90%;
+    border: 4px solid black;
+    transform: translate(-50%, -90%);
+    top: 25%;
+    width: 50%;
+    height: 5rem;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    transition: filter 250ms ease-in-out;
+    transition-duration: 300ms;
+    z-index: 2;
 }
 
 #moreButton:hover,
 #moreButton:focus {
     cursor: pointer;
-    filter: brightness(1.75);
-    opacity: 0.9;
+    filter: brightness(1.3);
 }
 
-#voteBarChocolate1 {
-    position: absolute;
+.voteBarContainer {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -10rem;
     z-index: 2;
-    height: 20%;
-    width: 30%;
-    background-color: green;
-    border: 4px solid black;
-    font-weight: bolder;
-    font-size: 1.5rem;
-    margin-left: 2rem;
-    color: black;
 }
 
-#voteBarChocolate2 {
-    position: absolute;
-    z-index: 2;
-    height: 20%;
-    width: 29%;
-    background-color: green;
-    border: 4px solid black;
-    font-weight: bolder;
-    font-size: 1.5rem;
-    margin-left: 2rem;
+.voteBar {
+    font-size: 1.2rem;
+    width: 6rem;
     color: black;
-}
-
-#voteBarVanilla {
-    position: absolute;
-    z-index: 2;
-    height: 20%;
-    width: 41%;
-    background-color: green;
-    border: 4px solid black;
-    font-weight: bolder;
-    font-size: 1rem;
-    margin-left: 2rem;
-    color: black;
+    font-weight: 800;
+    font-style: italic;
+    padding: 0.2rem 0.4rem;
+    background-color: #551011;
+    border: 5px solid black;
+    border-radius: 5px;
 }
 
 h2:hover {
     cursor: pointer;
-    filter: brightness(1.25);
-    transition: 0.3s;
+    filter: brightness(1.5);
 }
 
 .noHover {
@@ -224,25 +211,38 @@ a {
 
 a:hover,
 a:focus {
-    color: orange;
+    color: blue;
 }
 
 a:visited {
-    color: blue;
+    color: purple;
 }
 
 @media screen and (min-width: 800px) {
     #moreButton {
-        margin-top: 3rem;
+        margin-top: 1rem;
+        width: 40%;
     }
 
     #voteButton {
-        margin-top: 0.4rem;
+        margin-top: 0.8rem;
+    }
+
+    #voteBarChocolate2 {
+        margin: 0 9rem;
+    }
+
+    p {
+        font-size: 1.6rem;
     }
 }
 
 @media screen and (max-width: 800px) {
     #moreButton {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
     }
 }

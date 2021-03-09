@@ -4,6 +4,8 @@ const mainText = document.querySelector("#mainText");
 const moreButton = document.querySelector("#moreButton");
 const wrappers = document.querySelectorAll(".wrapper");
 const checkboxes = document.querySelectorAll("input");
+const heading = document.querySelector("h2");
+const voteBars = document.querySelectorAll(".voteBarContainer");
 
 const homeReload = () => {
     document.location.href = "/";
@@ -11,9 +13,9 @@ const homeReload = () => {
 
 let clicks = 0;
 let explanation = [
-    "Now one of the chocolates is victorious!  A more accurate reflection of voters' true preference...",
-    "The undesirable vote-splitting effect has been avoided - no one candidate is able to spoil the election",
-    "To learn more, go to...",
+    "This time one of the chocolate's is victorious!",
+    "The vote-splitting effect has been avoided and the results now show the true voter preference",
+    "To learn more go to...",
 ];
 
 voteButton.addEventListener("click", (e) => {
@@ -32,6 +34,7 @@ voteButton.addEventListener("click", (e) => {
     voteButton.classList.toggle("hide");
     moreButton.classList.toggle("hide");
     wrappers.forEach((wrapper) => wrapper.classList.add("noHover"));
+    voteBars.forEach((voteBar) => voteBar.classList.toggle("hide"));
     images[1].classList.add("winner");
     images[0].style.border = "none";
     images[2].style.border = "none";
@@ -45,7 +48,9 @@ moreButton.addEventListener("click", () => {
     }
     if (clicks == 2) {
         mainText.innerHTML = explanation[2];
+        heading.innerHTML = "Replay";
         moreButton.innerHTML =
-            "<a target='_blank' rel='noopener noreferrer' href='https://www.electionscience.org'>ElectionScience.org</a>";
+            "<a href='https://www.electionscience.org' target=_blank rel=noopener noreferrer>ElectionScience.org</a>";
+        voteBars.forEach((voteBar) => voteBar.classList.toggle("hide"));
     }
 });

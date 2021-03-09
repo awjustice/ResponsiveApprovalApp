@@ -4,9 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,600&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Cinzel+Decorative:wght@700;900&family=Source+Sans+Pro:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Monoton&family=Tinos:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" media="screen" type="text/css" href="styles.css" />
     <title>Responsive Approval Voting App</title>
   </head>
@@ -23,10 +21,10 @@
     </div>
 
 
-    <button id="moreButton" class="hide">Read On</button>
 
 
   <div id="main">
+    <button id="moreButton" class="hide">Read On</button>
 
     <div class="wrapper">
     <input type="checkbox" id="chocolate1" class="offThePage" name="checkbox">
@@ -62,10 +60,14 @@
   </div>
 
 
-
-    <div id="footer">
-      <button id="voteButton"><em>Vote</em></button>
-    </div>
+  <div class="voteBarContainer hide">
+    <div id="voteBarChocolate1" class="voteBar">1759  |  47%</div>
+    <div id="voteBarChocolate2" class="voteBar">1803  |  48%</div>
+    <div id="voteBarVanilla" class="voteBar">1589  |  42%</div>
+</div>
+<div class="footer">
+    <button id="voteButton"><em>Vote</em></button>
+</div>
 
 
 
