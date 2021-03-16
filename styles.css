@@ -6,15 +6,20 @@
 }
 
 html {
+    height: 100%;
 }
 
 body {
     margin: 0;
     padding: 0;
-    color: black;
     background-color: black;
     min-height: 100vh;
     text-align: center;
+    background: black;
+    background-image: url(images/gradient.jpg);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 #header {
@@ -28,14 +33,22 @@ h2 {
     font-weight: 900;
     border: 3px solid black;
     margin: 0.3rem auto;
-    padding: 0.25rem;
+    padding: 0.2rem 0.5rem;
     border-radius: 8px;
-    background-image: radial-gradient(
+    /* background-image: radial-gradient(
         circle farthest-corner at 16.5% 28.1%,
         rgba(15, 27, 49, 1) 0%,
         rgba(0, 112, 218, 1) 90%
-    );
+    ); */
     transition-duration: 900ms;
+}
+
+h2:hover,
+h2:focus {
+    cursor: pointer;
+    filter: brightness(1.5);
+    background-color: #100c08;
+    border: 1px solid rgba(0, 0, 150, 0);
 }
 
 #background {
@@ -59,6 +72,7 @@ p {
     line-height: 1.1;
     letter-spacing: 0.4px;
     padding: 1rem;
+    color: black !important;
 }
 
 #main {
@@ -69,15 +83,12 @@ p {
 }
 
 img {
-    position: relative;
-    z-index: 1;
     display: inline-block;
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
     border: 2px solid black;
     border-radius: 5px;
-    box-shadow: black 4px 4px 4px;
     transition-duration: 200ms;
 }
 
@@ -98,13 +109,12 @@ input[type="checkbox"]:checked + label img {
 }
 
 .winner {
-    opacity: 1;
     filter: brightness(1.5);
     border: 8px solid red;
 }
 
 .loser {
-    filter: brightness(0.3);
+    filter: grayscale(10%);
 }
 
 .offThePage {
@@ -125,8 +135,8 @@ input[type="checkbox"]:checked + label img {
 #voteButton {
     font-family: "Monoton", cursive;
     background-color: darkred;
-    color: black;
-    font-weight: 800;
+    color: black !important;
+    font-weight: 900;
     padding: 0.4rem 1rem 0.4rem 0.4rem;
     margin-top: -5rem;
     font-size: 3rem;
@@ -135,6 +145,7 @@ input[type="checkbox"]:checked + label img {
     box-shadow: black 2px 2px 2px;
     transition: transform 200ms ease-in;
     transition-duration: 300ms;
+    border: 2px solid grey;
 }
 
 #voteButton:hover,
@@ -142,13 +153,14 @@ input[type="checkbox"]:checked + label img {
     cursor: pointer;
     filter: brightness(1.5);
     transform: scale(1.03);
+    border: 4px solid grey;
 }
 
 #moreButton {
     background-color: #660000;
     color: black;
     font-family: "Cinzel", serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 900;
     position: absolute;
     left: 50%;
@@ -156,7 +168,7 @@ input[type="checkbox"]:checked + label img {
     border: 4px solid black;
     transform: translate(-50%, -90%);
     top: 25%;
-    width: 50%;
+    width: 15rem;
     height: 5rem;
     border-radius: 10px;
     margin-top: 1.5rem;
@@ -181,18 +193,13 @@ input[type="checkbox"]:checked + label img {
 .voteBar {
     font-size: 1.2rem;
     width: 6rem;
-    color: black;
+    color: white;
     font-weight: 800;
     font-style: italic;
     padding: 0.2rem 0.4rem;
     background-color: #551011;
     border: 5px solid black;
     border-radius: 5px;
-}
-
-h2:hover {
-    cursor: pointer;
-    filter: brightness(1.5);
 }
 
 .noHover {
@@ -206,16 +213,13 @@ h2:hover {
 
 a {
     text-decoration: none;
-    color: red;
+    color: black;
+    transition: color 500ms ease-out;
 }
 
 a:hover,
 a:focus {
     color: blue;
-}
-
-a:visited {
-    color: purple;
 }
 
 @media screen and (min-width: 800px) {
@@ -237,7 +241,7 @@ a:visited {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
     #moreButton {
         font-size: 1.2rem;
     }

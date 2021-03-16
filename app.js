@@ -21,6 +21,8 @@ voteButton.addEventListener("click", () => {
     moreButton.classList.toggle("hide");
     voteButton.classList.toggle("hide");
     images[2].classList.add("winner");
+    images[0].classList.add("loser");
+
     images[0].style.border = "none";
     images[1].style.border = "none";
 });
