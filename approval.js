@@ -8,7 +8,7 @@ const heading = document.querySelector("h2");
 const voteBars = document.querySelectorAll(".voteBarContainer");
 
 const homeReload = () => {
-    document.location.href = "/";
+    document.location.href = "index.html";
 };
 
 let clicks = 0;
