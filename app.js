@@ -4,10 +4,11 @@ const mainText = document.querySelector("#mainText");
 const images = document.querySelectorAll("img");
 const voteBars = document.querySelectorAll(".voteBarContainer");
 const radios = document.querySelectorAll("input");
+const heading = document.querySelector("h2");
 
-const homeReload = () => {
+heading.addEventListener("click", () => {
     document.location.href = "index.html";
-};
+});
 
 voteButton.addEventListener("click", () => {
     if (!(radios[0].checked || radios[1].checked || radios[2].checked)) {

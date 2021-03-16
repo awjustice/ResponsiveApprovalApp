@@ -4,12 +4,12 @@ const mainText = document.querySelector("#mainText");
 const moreButton = document.querySelector("#moreButton");
 const wrappers = document.querySelectorAll(".wrapper");
 const checkboxes = document.querySelectorAll("input");
-const heading = document.querySelector("h2");
 const voteBars = document.querySelectorAll(".voteBarContainer");
+const heading = document.querySelector("h2");
 
-const homeReload = () => {
+heading.addEventListener("click", () => {
     document.location.href = "index.html";
-};
+});
 
 let clicks = 0;
 let explanation = [
