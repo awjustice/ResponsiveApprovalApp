@@ -2,7 +2,7 @@ const voteButton = document.querySelector("#voteButton");
 const moreButton = document.querySelector("#moreButton");
 const mainText = document.querySelector("#mainText");
 const images = document.querySelectorAll("img");
-const voteBars = document.querySelectorAll(".voteBarContainer");
+const voteBars = document.querySelectorAll(".voteBar");
 const radios = document.querySelectorAll("input");
 const heading = document.querySelector("h2");
 
@@ -23,7 +23,6 @@ voteButton.addEventListener("click", () => {
     voteButton.classList.toggle("hide");
     images[2].classList.add("winner");
     images[0].classList.add("loser");
-
     images[0].style.border = "none";
     images[1].style.border = "none";
 });
@@ -40,7 +39,7 @@ const infoTextChange = () => {
     clicks += 1;
     mainText.innerHTML = explanation[clicks];
     if (clicks == 1) {
-        moreButton.innerHTML = "Show me a better way";
+        moreButton.innerHTML = "A better way";
     }
     if (clicks == 2) {
         moreButton.innerHTML = "Let's try it!";

@@ -26,9 +26,6 @@
         </div>
 
         <div id="main">
-            <button id="moreButton" onclick="infoTextChange()" class="hide">
-                Tell me why
-            </button>
             <div class="wrapper">
                 <input
                     type="radio"
@@ -42,6 +39,9 @@
                         id="chocolate1"
                         alt="chocolate1"
                     />
+                    <div id="voteBarChocolate1" class="voteBar hide">
+                        1120 | 30%
+                    </div>
                 </label>
             </div>
 
@@ -58,6 +58,9 @@
                         id="chocolate2"
                         alt="chocolate2"
                     />
+                    <div id="voteBarChocolate2" class="voteBar hide">
+                        1105 | 29%
+                    </div>
                 </label>
             </div>
 
@@ -74,15 +77,16 @@
                         id="vanilla"
                         alt="vanilla"
                     />
+                    <div id="voteBarVanilla" class="voteBar hide">
+                        1546 | 41%
+                    </div>
                 </label>
             </div>
         </div>
+        <button id="moreButton" onclick="infoTextChange()" class="hide">
+            Tell me why
+        </button>
 
-        <div class="voteBarContainer hide">
-            <div id="voteBarChocolate1" class="voteBar">1120 | 30%</div>
-            <div id="voteBarChocolate2" class="voteBar">1105 | 29%</div>
-            <div id="voteBarVanilla" class="voteBar">1546 | 41%</div>
-        </div>
         <div class="footer">
             <button id="voteButton"><em>Vote</em></button>
         </div>

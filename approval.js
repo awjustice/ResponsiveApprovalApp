@@ -4,7 +4,7 @@ const mainText = document.querySelector("#mainText");
 const moreButton = document.querySelector("#moreButton");
 const wrappers = document.querySelectorAll(".wrapper");
 const checkboxes = document.querySelectorAll("input");
-const voteBars = document.querySelectorAll(".voteBarContainer");
+const voteBars = document.querySelectorAll(".voteBar");
 const heading = document.querySelector("h2");
 
 heading.addEventListener("click", () => {
@@ -15,7 +15,7 @@ let clicks = 0;
 let explanation = [
     "This time one of the chocolate's is victorious!",
     "The vote-splitting effect has been avoided and the results now show the true voter preference",
-    "To learn more go to...",
+    "To learn more, go to...",
 ];
 
 voteButton.addEventListener("click", (e) => {
@@ -49,6 +49,7 @@ moreButton.addEventListener("click", () => {
     if (clicks == 2) {
         mainText.innerHTML = explanation[2];
         heading.innerHTML = "Replay";
+        heading.style.border = "4px solid white";
         moreButton.innerHTML =
             "<a href='https://www.electionscience.org' target=_blank rel=noopener noreferrer>ElectionScience.org</a>";
         voteBars.forEach((voteBar) => voteBar.classList.toggle("hide"));

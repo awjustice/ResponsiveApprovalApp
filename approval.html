@@ -1,78 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Monoton&family=Tinos:ital@1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" media="screen" type="text/css" href="styles.css" />
-    <title>Responsive Approval Voting App</title>
-  </head>
-  <body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Monoton&family=Tinos:ital@1&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            media="screen"
+            type="text/css"
+            href="styles.css"
+        />
+        <title>Responsive Approval Voting App</title>
+    </head>
+    <body>
+        <div id="header">
+            <h2><strong>What is Approval Voting?</strong></h2>
 
-    <div id="header">
+            <div id="background">
+                <p id="mainText">
+                    <em>Now choose all that you approve of...one or more</em>
+                </p>
+            </div>
+        </div>
 
-      <h2><strong>What is Approval Voting?</strong></h2>
+        <div id="main">
+            <div class="wrapper">
+                <input
+                    type="checkbox"
+                    id="chocolate1"
+                    class="offThePage"
+                    name="checkbox"
+                />
 
-      <div id="background">
-        <p id="mainText"><em>Now choose all that you approve of...one or more...</em></p>
-      </div>
+                <label for="chocolate1">
+                    <img
+                        src="./images/Chocolate1.jpg"
+                        id="chocolate1"
+                        alt="chocolate1"
+                    />
+                    <div id="voteBarChocolate1" class="voteBar hide">
+                        1759 | 47%
+                    </div>
+                </label>
+            </div>
 
-    </div>
+            <div class="wrapper">
+                <input
+                    type="checkbox"
+                    id="chocolate2"
+                    class="offThePage"
+                    name="checkbox"
+                />
 
+                <label for="chocolate2">
+                    <img
+                        src="./images/Chocolate2.jpg"
+                        id="chocolate2"
+                        alt="chocolate2"
+                    />
+                    <div id="voteBarChocolate2" class="voteBar hide">
+                        1803 | 48%
+                    </div>
+                </label>
+            </div>
 
+            <div class="wrapper">
+                <input
+                    type="checkbox"
+                    id="vanilla"
+                    class="offThePage"
+                    name="checkbox"
+                />
 
+                <label for="vanilla">
+                    <img
+                        src="./images/Vanilla.jpg"
+                        id="vanilla"
+                        alt="vanilla"
+                    />
+                    <div id="voteBarVanilla" class="voteBar hide">
+                        1589 | 42%
+                    </div>
+                </label>
+            </div>
+        </div>
 
-  <div id="main">
-    <button id="moreButton" class="hide">Read On</button>
+        <button id="moreButton" class="hide">Read On</button>
 
-    <div class="wrapper">
-    <input type="checkbox" id="chocolate1" class="offThePage" name="checkbox">
+        <div class="footer">
+            <button id="voteButton"><em>Vote</em></button>
+        </div>
 
-    <label for="chocolate1">
-      <img src="./images/Chocolate1.jpg" id="chocolate1" alt="chocolate1" />          
-      <div id="voteBarChocolate1" class="voteBar hide"><p>1120 </br> 30%</p></div>
-    </label>
-
-
-    </div>
-    
-
-      <div class="wrapper">
-    <input type="checkbox" id="chocolate2" class="offThePage" name="checkbox">     
-
-    <label for="chocolate2">
-      <img src="./images/Chocolate2.jpg" id="chocolate2" alt="chocolate2" />  
-      <div id="voteBarChocolate2" class="voteBar hide"><p>1105 </br> 29%</p></div>
-    </label>
-
-  </div>
-
-    <div class="wrapper">  
-    <input type="checkbox" id="vanilla" class="offThePage" name="checkbox">      
-
-    <label for="vanilla">
-      <img src="./images/Vanilla.jpg" id="vanilla" alt="vanilla" />      
-      <div id="voteBarVanilla" class="voteBar hide"><p>1546 </br> 41%</p></div>
-    </label>  
-
-  </div>
-  </div>
-
-
-  <div class="voteBarContainer hide">
-    <div id="voteBarChocolate1" class="voteBar">1759  |  47%</div>
-    <div id="voteBarChocolate2" class="voteBar">1803  |  48%</div>
-    <div id="voteBarVanilla" class="voteBar">1589  |  42%</div>
-</div>
-<div class="footer">
-    <button id="voteButton"><em>Vote</em></button>
-</div>
-
-
-
-    <script type="text/javascript" src="approval.js"></script>
-
-  </body>
-
+        <script type="text/javascript" src="approval.js"></script>
+    </body>
 </html>
