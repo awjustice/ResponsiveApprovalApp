@@ -153,7 +153,7 @@ input[type="checkbox"]:checked + label img {
     background-color: #ff0800;
     color: black;
     font-family: "Cinzel", serif;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: 900;
     width: 15rem;
     height: 5rem;
@@ -207,7 +207,7 @@ a {
     text-decoration: none;
     color: darkblue;
     transition: color 1s;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 a:hover,
