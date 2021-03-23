@@ -15,7 +15,7 @@ body {
     background-color: black;
     min-height: 100vh;
     text-align: center;
-    background: black;
+    background: #100c08;
     background-image: url(images/gradient.jpg);
     object-fit: cover;
     background-repeat: no-repeat;
@@ -29,17 +29,13 @@ body {
 }
 
 h2 {
+    color: white;
     font-family: "Cinzel", serif;
     font-weight: 900;
     border: 3px solid black;
     margin: 0.3rem auto;
     padding: 0.2rem 0.5rem;
     border-radius: 8px;
-    /* background-image: radial-gradient(
-        circle farthest-corner at 16.5% 28.1%,
-        rgba(15, 27, 49, 1) 0%,
-        rgba(0, 112, 218, 1) 90%
-    ); */
     transition-duration: 900ms;
 }
 
@@ -83,7 +79,7 @@ p {
 }
 
 img {
-    display: inline;
+    display: inline-block;
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
@@ -134,38 +130,35 @@ input[type="checkbox"]:checked + label img {
 
 #voteButton {
     font-family: "Monoton", cursive;
-    background-color: darkred;
-    color: black !important;
+    background-color: #ff0800;
+    color: black;
     font-weight: 900;
     padding: 0.4rem 1rem 0.4rem 0.4rem;
     font-size: 3rem;
     border-radius: 10px;
-    border: 5px solid black;
+    border: 5px solid #8a0707;
     box-shadow: black 2px 2px 2px;
-    transition: transform 200ms ease-in;
-    transition-duration: 300ms;
-    border: 2px solid grey;
+    transition: all 300ms ease-in;
 }
 
 #voteButton:hover,
 #voteButton:focus {
     cursor: pointer;
     filter: brightness(1.5);
-    transform: scale(1.03);
-    border: 4px solid grey;
+    transform: scale(1.02);
+    border: 8px solid rgb(74, 14, 14);
 }
 
 #moreButton {
-    background-color: #eb1414;
+    background-color: #ff0800;
     color: black;
     font-family: "Cinzel", serif;
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 900;
-    border: 4px solid black;
     width: 15rem;
     height: 5rem;
     border-radius: 15px;
-    transition: filter 250ms ease;
+    transition: all 400ms ease;
     transition-duration: 300ms;
     z-index: 2;
     border: 5px solid darkred;
@@ -175,6 +168,8 @@ input[type="checkbox"]:checked + label img {
 #moreButton:focus {
     cursor: pointer;
     filter: brightness(1.4);
+    border: 8px solid rgb(74, 14, 14);
+    outline: none;
 }
 
 .voteBarContainer {
@@ -210,18 +205,18 @@ input[type="checkbox"]:checked + label img {
 
 a {
     text-decoration: none;
-    color: black;
-    transition: color 500ms ease-out;
+    color: darkblue;
+    transition: color 1s;
     font-size: 1.2rem;
 }
 
 a:hover,
 a:focus {
-    color: lightblue;
-    transition: color 500ms ease-out;
+    color: blue;
+    transition: color 1s;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
     #moreButton {
         width: 40%;
         font-size: 3rem;
